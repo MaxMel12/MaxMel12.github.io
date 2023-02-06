@@ -37,10 +37,10 @@ window.addEventListener("DOMContentLoaded",()=>{
     function listenorientation(o){
         console.log("gamma", o.gamma)
         document.getElementById("disp").innerHTML = "gamma "+ o.gamma
-        document.getElementById("square").style.left = Math.abs(o.gamma)*100+"%"
+        document.getElementById("square").style.left = Math.abs(o.gamma)+"%"
     }
     
-
+    //document.getElementById("square").style.left = Math.abs(-0.60)*100+"%"
     /*if(window.DeviceOrientationEvent){
       //document.getElementById("disp").innerHTML = "we lit"
       window.addEventListener("deviceorientation", listenorientation, false);
