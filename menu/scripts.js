@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded",()=>{
       console.log("DeviceOrientationEvent is not supported");
       document.getElementById("disp").innerHTML = "not supported"
     }*/
-    function click(){
+    function permission(){
       console.log("clicked")
       if (typeof DeviceOrientationEvent.requestPermission === 'function') {
         document.getElementById("disp").innerHTML = "Bruh time"
