@@ -38,21 +38,6 @@ window.addEventListener("DOMContentLoaded",()=>{
         console.log("gamma", o.gamma)
         document.getElementById("disp").innerHTML = "gamma "+ o.gamma
     }
-
-    function click(){
-      console.log("clicked")
-      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-        document.getElementById("disp").innerHTML = "Bruh time"
-        DeviceOrientationEvent.requestPermission()
-          .then(permissionState => {
-            if (permissionState === 'granted') {
-              document.getElementById("disp").innerHTML = "Yay"
-              window.addEventListener('deviceorientation', listenorientation,false);
-            }
-          })
-          .catch(document.getElementById("disp").innerHTML = "fuckk");
-      }
-    } 
     
 
     /*if(window.DeviceOrientationEvent){
@@ -64,3 +49,18 @@ window.addEventListener("DOMContentLoaded",()=>{
     }*/
 
 })
+
+function click(){
+  console.log("clicked")
+  if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+    document.getElementById("disp").innerHTML = "Bruh time"
+    DeviceOrientationEvent.requestPermission()
+      .then(permissionState => {
+        if (permissionState === 'granted') {
+          document.getElementById("disp").innerHTML = "Yay"
+          window.addEventListener('deviceorientation', listenorientation,false);
+        }
+      })
+      .catch(document.getElementById("disp").innerHTML = "fuckk");
+  }
+} 
