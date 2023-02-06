@@ -37,6 +37,7 @@ window.addEventListener("DOMContentLoaded",()=>{
     function listenorientation(o){
         console.log("gamma", o.gamma)
         document.getElementById("disp").innerHTML = "gamma "+ o.gamma
+        document.getElementById("square").left = o.gamme*100+"%"
     }
     
 
