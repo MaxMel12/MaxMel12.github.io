@@ -47,6 +47,7 @@ window.addEventListener("DOMContentLoaded",()=>{
       console.log("DeviceOrientationEvent is not supported");
       document.getElementById("disp").innerHTML = "not supported"
     }*/
+
     function permission(){
       console.log("clicked")
       if (typeof DeviceOrientationEvent.requestPermission === 'function') {
@@ -61,4 +62,7 @@ window.addEventListener("DOMContentLoaded",()=>{
           .catch(document.getElementById("disp").innerHTML = "fuckk");
       }
     } 
+
+    document.getElementById ("disp").addEventListener ("click", permission, false);
+
 })
