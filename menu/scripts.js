@@ -1,3 +1,5 @@
+menuOpen = false
+
 window.addEventListener("DOMContentLoaded",()=>{
     /*// module aliases
     var Engine = Matter.Engine,
@@ -34,11 +36,11 @@ window.addEventListener("DOMContentLoaded",()=>{
     // run the engine
     Runner.run(runner, engine);*/
 
-    function listenorientation(o){
+    /*function listenorientation(o){
         console.log("gamma", o.gamma)
         document.getElementById("disp").innerHTML = "gamma "+ o.gamma
         document.getElementById("square").style.left = Math.abs(o.gamma)+"%"
-    }
+    }*/
     
     //document.getElementById("square").style.left = Math.abs(-0.60)*100+"%"
     /*if(window.DeviceOrientationEvent){
@@ -49,7 +51,7 @@ window.addEventListener("DOMContentLoaded",()=>{
       document.getElementById("disp").innerHTML = "not supported"
     }*/
 
-    function permission(){
+    /*function permission(){
       console.log("clicked")
       if (typeof DeviceOrientationEvent.requestPermission === 'function') {
         document.getElementById("disp").innerHTML = "Bruh time"
@@ -64,6 +66,18 @@ window.addEventListener("DOMContentLoaded",()=>{
       }
     } 
 
-    document.getElementById ("disp").addEventListener ("click", permission, false);
-
+    document.getElementById ("disp").addEventListener ("click", permission, false);*/
+    
+    document.getElementById("close-btn").addEventListener("click", toggleMenu, false);
+    document.getElementById("menu-btn").addEventListener("click", toggleMenu, false);
 })
+
+function toggleMenu(){
+  if(menuOpen){
+    document.getElementById("menu").style.visibility="hidden"
+    menuOpen = false
+  }else{
+    document.getElementById("menu").style.visibility="visible"
+    menuOpen = true
+  }
+}
