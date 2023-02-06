@@ -39,17 +39,21 @@ window.addEventListener("DOMContentLoaded",()=>{
         document.getElementById("disp").innerHTML = "gamma "+ o.gamma
     }
 
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-      document.getElementById("disp").innerHTML = "Bruh time"
-      DeviceOrientationEvent.requestPermission()
-        .then(permissionState => {
-          if (permissionState === 'granted') {
-            document.getElementById("disp").innerHTML = "Yay"
-            window.addEventListener('deviceorientation', listenorientation,false);
-          }
-        })
-        .catch(document.getElementById("disp").innerHTML = "fuckk");
-    }
+    function click(){
+      console.log("clicked")
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        document.getElementById("disp").innerHTML = "Bruh time"
+        DeviceOrientationEvent.requestPermission()
+          .then(permissionState => {
+            if (permissionState === 'granted') {
+              document.getElementById("disp").innerHTML = "Yay"
+              window.addEventListener('deviceorientation', listenorientation,false);
+            }
+          })
+          .catch(document.getElementById("disp").innerHTML = "fuckk");
+      }
+    } 
+    
 
     /*if(window.DeviceOrientationEvent){
       //document.getElementById("disp").innerHTML = "we lit"
