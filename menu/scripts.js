@@ -48,7 +48,7 @@ window.addEventListener("DOMContentLoaded",()=>{
             window.addEventListener('deviceorientation', listenorientation,false);
           }
         })
-        .catch(console.log("fuck"));
+        .catch(document.getElementById("disp").innerHTML = "fuckk");
     }
 
     /*if(window.DeviceOrientationEvent){
