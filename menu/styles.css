@@ -25,7 +25,8 @@ body{
     margin:0;
     background: rgb(14,1,61);
     background: radial-gradient(circle, rgba(14,1,61,1) 0%, rgba(102,45,145,1) 100%);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .container{
@@ -62,9 +63,8 @@ h2{
     font-size: 18pt;
     margin-bottom: 9px;
     text-transform: uppercase;
-    color: rgb(39, 39, 39);
+    color: rgb(29, 29, 29);
     text-align: center;
-    animation: fadein 2s ease-out;
 }
 
 p{
@@ -73,7 +73,7 @@ p{
     text-align: center;
     margin:0px;
     margin-bottom: 24px;
-    color: rgb(58, 58, 58);
+    color: rgb(63, 63, 63);
 }
 
 #square-container{
@@ -90,21 +90,23 @@ p{
     background-color: white;
 }
 
-.tree{
+#tree{
     position: fixed;
     bottom:0;
     left:30%;
     height:40%;
     z-index: 2;
+    transition: all 1s;
 }
 
-.mountains{
+#mountains{
     position: fixed;
     bottom:0;
     left:0;
     width:100%;
     z-index: 1;
     filter: saturate(1) brightness(1) blur(3px);
+    transition: all 1.5s;
 }
 
 .btns{
@@ -157,18 +159,16 @@ p{
     left:-20%;
     filter: blur(1px);
     opacity: 0.5;
+    transition: all 3s;
 }
 
 .menu-container{
-    visibility: hidden;
     position:absolute;
-    border-width:1rem;
-    background-color: rgb(255, 255, 255);
-    border-color: hsl(0, 0%, 0%);
-    border-width: 1rem;
-    border-style: solid;
-    margin:0; 
-    margin-top: 2rem;
+    background-color: white;
+    border-color: hsl(0, 0%, 47%);
+    border-width: 0.5rem;
+    border-style: double;
+    margin:2rem; 
     padding: 4rem;
     padding-bottom: 10rem;
     display: flex;
@@ -176,9 +176,25 @@ p{
     align-items: center;
     margin-top: 2rem;
     z-index: 999;
+    transition: all 1s;
 }
 
 .close-btn{
     align-self: flex-end;
     height:2rem;
+}
+
+.hidden{
+    transform: translateY(100%);
+    opacity:0;
+}
+
+.hidden-rev{
+    transform: translateY(-100%);
+    opacity:0;
+}
+
+#home{
+    transition: all 1s;
+    z-index: 999;
 }

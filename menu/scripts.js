@@ -74,10 +74,17 @@ window.addEventListener("DOMContentLoaded",()=>{
 
 function toggleMenu(){
   if(menuOpen){
-    document.getElementById("menu").style.visibility="hidden"
+    document.getElementById("menu").classList.add("hidden-rev")
+    document.getElementById("home").classList.remove("hidden")
     menuOpen = false
+    document.getElementById("mountains").classList.remove('hidden')
+    document.getElementById("tree").classList.remove('hidden')
+    
   }else{
-    document.getElementById("menu").style.visibility="visible"
+    document.getElementById("menu").classList.remove("hidden-rev")
+    document.getElementById("home").classList.add("hidden")
     menuOpen = true
+    document.getElementById("mountains").classList.add('hidden')
+    document.getElementById("tree").classList.add('hidden')
   }
 }

@@ -1,0 +1,75 @@
+.container{
+    margin:2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.caption{
+
+}
+
+.project{
+    width:15rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectpreview{
+    width:15rem;
+    height:15rem;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+@keyframes rise{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.05);
+    }
+}
+
+.projectpreview:hover{
+    cursor: pointer;
+    background-color: rgb(223, 200, 171);
+}
+
+.projectcaption{
+    text-align: center;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color:rgb(212, 212, 212);
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    font-weight: bold;
+    margin-bottom:0px;
+}
+
+body{
+    background-color: rgb(83, 109, 101);
+}
+
+.treehaus .title{
+    color:rgba(0, 0, 0, 0.589);
+    font-size: 2rem;
+    font-weight: bold;
+}
