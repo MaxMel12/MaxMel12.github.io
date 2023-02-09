@@ -14,6 +14,12 @@
         transform: translateY(0%);
     }
 }
+
+@font-face{
+    font-family: handlee;
+    src:url('./assets/handlee.ttf')
+}
+
 body{
     background-color: hsl(46, 53%, 9%);
     color:white;
@@ -27,6 +33,13 @@ body{
     background: radial-gradient(circle, rgba(14,1,61,1) 0%, rgba(102,45,145,1) 100%);
     overflow-x: hidden;
     overflow-y: auto;
+    width:100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 .container{
@@ -53,15 +66,16 @@ body{
 
 h1{
     font-weight: bold;
-    font-size: 36pt;
+    font-size: 20pt;
     margin-top: 2rem;
     margin-bottom: 0px;
 }
 
 h2{
     font-weight: bold;
-    font-size: 18pt;
-    margin-bottom: 9px;
+    font-size: 16pt;
+    margin-bottom: 10px;
+    margin-top:10px;
     text-transform: uppercase;
     color: rgb(29, 29, 29);
     text-align: center;
@@ -73,7 +87,8 @@ p{
     text-align: center;
     margin:0px;
     margin-bottom: 24px;
-    color: rgb(63, 63, 63);
+    color: rgb(83, 83, 83);
+    text-align: left;
 }
 
 #square-container{
@@ -94,9 +109,10 @@ p{
     position: fixed;
     bottom:0;
     left:30%;
-    height:40%;
+    height:20rem;
     z-index: 2;
-    transition: all 1s;
+    -webkit-transition: all 1.5s;;
+    transition: all 1.5s;
 }
 
 #mountains{
@@ -106,7 +122,8 @@ p{
     width:100%;
     z-index: 1;
     filter: saturate(1) brightness(1) blur(3px);
-    transition: all 1.5s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
 
 .btns{
@@ -124,8 +141,22 @@ p{
 }
 
 .btn{
-    width:70%;
-    margin-bottom: 3rem;
+    width:15rem;
+    font-family: handlee;
+    font-size: 2rem;
+    background-color: rgb(221, 221, 221);
+    margin-bottom: 2rem;
+    padding:1rem;
+    border: 2px black solid;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background-color: rgb(167, 167, 167);
+    cursor: pointer;
 }
 
 @keyframes cloudmove {
@@ -160,6 +191,7 @@ p{
     filter: blur(1px);
     opacity: 0.5;
     transition: all 3s;
+    -webkit-transition: all 3s;
 }
 
 .menu-container{
@@ -169,32 +201,143 @@ p{
     border-width: 0.5rem;
     border-style: double;
     margin:2rem; 
-    padding: 4rem;
+    padding: 2rem;
     padding-bottom: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 10rem;
     z-index: 999;
+    -webkit-transition: all 1s;
     transition: all 1s;
 }
 
 .close-btn{
-    align-self: flex-end;
+    position: fixed;
+    top:1.5rem;
+    left:1.5rem;
+    align-self: flex-start;
     height:2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    z-index: 1000;
 }
 
 .hidden{
-    transform: translateY(100%);
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
     opacity:0;
+    pointer-events: none;
 }
 
 .hidden-rev{
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
     opacity:0;
+    pointer-events: none;
 }
 
 #home{
+    -webkit-transition: all 1s;
     transition: all 1s;
     z-index: 999;
 }
+
+.artist-container{
+    display: flex;
+    margin-bottom: 2rem;
+    max-width: 90vw;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    padding:1rem;
+    min-width: 20rem;
+}
+
+
+
+.artist-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.socials-container{
+
+}
+
+.artist-img{
+    width:100%;
+    height:12rem;
+    object-fit: cover;
+}
+
+.social-link{
+    font-size: 2rem;
+    color: black;
+    margin-left: 1rem;
+}
+
+.artist-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.artist-list-container{
+    position:absolute;
+    margin:2rem; 
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    z-index: 999;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.about-container{
+    position:absolute;
+    margin:2rem; 
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    z-index: 999;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.artist-desc{
+    width: 100%;
+}
+
+.text-white{
+    color:white
+}
+
+.special-menu{
+    width:90%;
+    padding:1rem;
+    background-color: rgb(30, 39, 30);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.link{
+    text-decoration: none;
+    color:white;
+}
+
+i{
+
+}
+
+a{}

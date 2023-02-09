@@ -10,25 +10,39 @@
   <body>
     <script src="matter.min.js"></script>
     <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/50dc3a1ea9.js" crossorigin="anonymous"></script>
     <h1>TREE • HAUS</h1>
     <object id="tree" type="image/svg+xml" data="assets/Kid n tree.svg"></object>
     <img id="mountains" src="assets/mountains.svg">
-    <img class="cloud" src="assets/cloud1.svg" style="top:10%;animation-duration: 40s;left:0%">
-    <img class="cloud" src="assets/cloud2.svg" style="top:30%;animation-duration: 35s;left:20%">
-    <img class="cloud" src="assets/cloud3.svg" style="top:40%;animation-duration: 60s;left:30%">
-    <img class="cloud" src="assets/cloud1.svg" style="top:20%;animation-duration: 70s;left:20%">
-    <img class="cloud" src="assets/cloud2.svg" style="top:35%;animation-duration: 50s;left:60%">
-    <img class="cloud" src="assets/birds.svg" style="top:50%;animation-duration: 20s;left:0%">
+    <img class="cloud" src="assets/cloud1.svg" style="top:20%;animation-duration: 40s;animation-delay: -20s;">
+    <img class="cloud" src="assets/cloud2.svg" style="top:40%;animation-duration: 35s;animation-delay: -30s">
+    <img class="cloud" src="assets/cloud3.svg" style="top:50%;animation-duration: 60s;animation-delay: -20s">
+    <img class="cloud" src="assets/cloud1.svg" style="top:30%;animation-duration: 70s;animation-delay: 0s">
+    <img class="cloud" src="assets/cloud2.svg" style="top:45%;animation-duration: 50s;animation-delay: -30s">
+    <img class="cloud" src="assets/birds.svg" style="top:40%;animation-duration: 20s;animation-delay: -20s">
+    <img class="cloud" src="assets/cloud1.svg" style="top:15%;animation-duration: 90s;animation-delay: 0s">
 
-    <div id="home">
+    <div id="home" class="">
       <div class="btns" id="btns">
-        <img class="btn" src="assets/about.svg">
-        <img id="menu-btn" class="btn" src="assets/menu.svg">
+        <div class="btn" id="artists-btn">
+          ARTISTS
+        </div>
+        <div class="btn" id="menu-btn">
+          DRINK MENU
+        </div>
+        <div class="btn" id="about-btn">
+          <i class="fa-brands fa-instagram" style="margin-right: 1rem;"></i>
+          @treehaus.jpg
+        </div>
       </div>
     </div>
 
-	  <div class="menu-container hidden-rev" id="menu">
-        <img src="assets/close.svg" id="close-btn" class="close-btn">
+	  <div hidden class="menu-container hidden-rev" id="menu">
+        <div class="special-menu">
+          <h2 style="color:white">Seamoss Lemonade• $10</h2>
+          <h2 style="color:white">Gingerbliss • $6 (2 for $10)</h2>
+          <a class="link" href="https://www.eenijuice.com" target="_blank">by Eeni Juice <i class="fa-brands fa-instagram"></i></a>
+        </div>
         <h2>Spicy Moscow Mule • $7</h2>
         <p>Smirnoff Spicy Tamarind • Canada Dry (ginger ale?) • Tajin Chile Lime Seasoning</p>
         <h2>Mint Mojito  • $8</h2>
@@ -38,5 +52,17 @@
         <h2>Paloma  • $10</h2>
         <p>Tequila • Lime Juice • Squirt (lmfao) • Tajin Chile Lime Seasoning</p>
     </div>
+
+    <div class="artist-list-container hidden-rev" id="artists">
+    </div>
+
+    <div hidden class="menu-container hidden-rev" id="about">
+      <h2>About us</h2>
+      <p>Yeah</p>     
+    </div>
+    <i class="fa-solid fa-arrow-left close-btn hidden" id="close-menu"></i>
+    <i class="fa-solid fa-arrow-left close-btn hidden" id="close-artists"></i>
+    <i class="fa-solid fa-arrow-left close-btn hidden" id="close-about"></i>
+
   </body>
 </html>
