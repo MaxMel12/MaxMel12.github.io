@@ -113,6 +113,7 @@ p{
     z-index: 2;
     -webkit-transition: all 1.5s;;
     transition: all 1.5s;
+    pointer-events: none;
 }
 
 #mountains{
@@ -124,6 +125,7 @@ p{
     filter: saturate(1) brightness(1) blur(3px);
     -webkit-transition: all 1s;
     transition: all 1s;
+    pointer-events: none;
 }
 
 .btns{
@@ -184,7 +186,7 @@ p{
 }
 
 .cloud{
-    position: absolute;
+    position: fixed;
     height:40px;
     animation: cloudmove infinite linear;
     left:-20%;
@@ -192,6 +194,7 @@ p{
     opacity: 0.5;
     transition: all 3s;
     -webkit-transition: all 3s;
+    pointer-events: none;
 }
 
 .menu-container{
