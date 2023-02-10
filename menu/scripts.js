@@ -2,6 +2,8 @@ menuOpen = false
 
 window.addEventListener("DOMContentLoaded",()=>{
     
+    console.log(getQueryVariable("qr"))
+
     getArtistList(list)
     document.getElementById("close-menu").addEventListener("click", ()=>togglePage("menu"), false);
     document.getElementById("menu-btn").addEventListener("click", ()=>togglePage("menu"), false);
@@ -20,7 +22,7 @@ list = [
     artists:[
       {
         name:"Tyler Chamberlain",
-        description:"Photography",
+        description:"&#x1F1FA;&#x1F1F8; USA  • Photography",
         img:"",
         socials:[
           {
@@ -269,4 +271,15 @@ function togglePage(page){
     document.getElementById("tree").classList.add('hidden')
     document.getElementById("close-"+page).classList.remove('hidden')
   }
+}
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
 }
